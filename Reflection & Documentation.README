@@ -1,0 +1,28 @@
+
+
+
+### How did you use Windsurf for each project?
+I mainly used Windsurf as a coding buddy to help me get started. I used it to generate the initial code for the notebook so I didn't have to type out all the imports and synthetic data generation from scratch. It was also really helpful for the plotting code—I always forget the exact matplotlib syntax, so asking it to "plot accuracy vs split ratio" saved me a lot of Googling.
+
+### What prompts or approaches were most effective?
+I found that being specific worked best. Instead of pasting the whole assignment at once, I broke it down. For example, I asked it to "implement the basic train-test split loop" first, and once that was working, I moved on to the stratified part. Also, when I got errors, just pasting the error message usually got me the fix right away.
+
+### What did Windsurf struggle with, and how did you address it?
+It got a bit confused with the notebook state. At one point, I had `NameError`s because I hadn't run the first cell, but Windsurf thought the code itself was wrong. I realized I just needed to run the cells in order. It also sometimes writes code that is a bit too "perfect" with the synthetic data, so I had to make sure the noise levels were high enough to actually show the trends we were looking for.
+
+### How did using Windsurf change your learning process?
+It honestly made the process much faster and less frustrating. Instead of getting stuck on syntax errors or missing commas, I could focus on the actual results. I spent more time looking at the graphs and understanding the bias-variance tradeoff than I did debugging code, which I think helped me learn the concepts better.
+
+## 2. Key Takeaways (5 pts)
+
+### What was the most surprising thing you learned?
+I was actually surprised by how unstable the results were with the 90/10 split. I assumed that having more training data would always yield a better model, but the test set was so small that the accuracy jumped around a lot. It really showed me that you need a decent size test set to trust your evaluation.
+
+### What preprocessing technique do you think you'll use most?
+Definitely **Stratified Splitting**. It’s such a small change to the code (`stratify=y`), but it makes a huge difference when you have imbalanced classes. It seems like a "no-brainer" best practice that I'll probably use in almost every classification project from now on.
+
+### What would you do differently in a real-world project?
+In a real project, I wouldn't rely on a single train-test split. I'd use Cross-Validation to get a much more reliable measure of performance. Also, I'd obviously use real data. Synthetic data is nice for learning, but I know real-world data is way messier and would require a lot more cleaning and feature engineering.
+
+### One question or topic you want to explore further
+I'm interested in learning more about **Nested Cross-Validation**, especially for time-series. It seems tricky to tune hyperparameters without accidentally "peeking" into the future, so I want to understand the best practices for that.
